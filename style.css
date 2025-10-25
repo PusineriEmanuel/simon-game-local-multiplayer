@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#quienEstaJugando {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  background: rgb(52, 54, 56);
+}
+
+h1 {
+  color: rgb(221, 221, 221);
+  font-size: 3rem;
+  margin: 25px;
+  background: linear-gradient(
+    to bottom,
+    rgb(100, 94, 94),
+    rgba(0, 128, 255, 0)
+  );
+  border-radius: 35px;
+  padding: 15px;
+}
+
+h2 {
+  background: linear-gradient(
+    to bottom,
+    rgb(100, 94, 94),
+    rgba(0, 128, 255, 0)
+  );
+  margin: 25px;
+  padding: 20px;
+  border-radius: 35px;
+  color: rgb(248, 237, 180);
+  font-size: 3rem;
+}
+h2:nth-child(1) {
+  color: rgb(221, 221, 221);
+  margin-top: 100px;
+}
+
+button:hover {
+  background-color: rgb(100, 94, 94);
+  cursor: pointer;
+}
+input:focus {
+  outline: none;
+}
+
+p {
+  color: white;
+  margin: 10px;
+  padding: 5px;
+}
+
+.errorAlert {
+  animation: vibracion 0.5s ease-in;
+}
+
+@keyframes vibracion {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  75% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.mensaje-error {
+  color: red;
+  display: none;
+  font-size: 0.85em;
+}
+
+.input-error {
+  border: 2px solid red;
+  outline: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+input,
+button {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(71, 71, 71);
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+input::placeholder {
+  color: rgb(146, 146, 146);
+}
+
+.cubeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+
+.cube {
+  border-radius: 30px;
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  border: 10px solid black;
+  margin: 25px;
+  cursor: pointer;
+}
+
+#green {
+  background: rgb(81, 165, 76);
+}
+#red {
+  background: rgb(238, 66, 69);
+}
+#yellow {
+  background: rgb(240, 240, 81);
+}
+#blue {
+  background: rgb(89, 61, 243);
+}
+
+/* esto se esta activando?? cuando?? */
+.activeGreenCube {
+  background-color: rgb(109, 255, 109);
+}
+.activeRedCube {
+  background-color: rgb(255, 119, 109);
+}
+.activeYellowCube {
+  background-color: rgb(246, 255, 120);
+}
+.activeBlueCube {
+  background-color: rgb(19, 1, 138);
+}
+
+.pressed {
+  box-shadow: 15px 15px 15px black;
+  background-color: grey !important;
+}
+
+.game-over {
+  background: rgb(238, 66, 69);
+}
+
+/* porque primeraEtapa tambien esta en display: none?? */
+.segundaEtapa,
+.jugar,
+.primeraEtapa {
+  display: none;
+}
+
+.error {
+  background: linear-gradient(
+    to bottom,
+    rgb(238, 66, 69),
+    rgba(0, 128, 255, 0)
+  );
+  border-radius: 35px;
+  width: 50%;
+}
+
+.tablaDePuntuaciones {
+  text-align: center;
+}
+.newPStyle {
+  background-color: rgb(71, 71, 71);
+  border-radius: 15px;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 15px;
+  border: 2px solid black;
+}
+
+.divDeJugador {
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: rgb(71, 71, 71);
+  cursor: pointer;
+  width: 35%;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Simon Game</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- primeraEtapa -->
+    <div class="container" id="primeraEtapa">
+      <header>
+        <h1>SIMON GAME</h1>
+      </header>
+      <section>
+        <form action="">
+          <input
+            type="number"
+            id="jugadores"
+            placeholder="Cuantos jugadore son?"
+          />
+          <small id="error-jugadores" class="mensaje-error"></small>
+          <button type="button" id="agregarInputTest">Ingresar</button>
+        </form>
+      </section>
+    </div>
+    <!-- segundaEtapa -->
+    <div class="container segundaEtapa" id="segundaEtapa">
+      <header>
+        <div id="quienEstaJugando">
+          <h1>Seleccione Jugador</h1>
+        </div>
+        <h2 id="pressAKeyToStart">Press A Key to Start</h2>
+      </header>
+      <section>
+        <div class="cubeContainer">
+          <div class="cube" id="green"></div>
+          <div class="cube" id="red"></div>
+        </div>
+        <div class="cubeContainer">
+          <div class="cube" id="yellow"></div>
+          <div class="cube" id="blue"></div>
+        </div>
+
+        <div class="tablaDePuntuaciones">
+          <h2>Tabla de Puntuaciones</h2>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js.js"></script>
+  </body>
+</html>
