@@ -26,12 +26,17 @@ Juego Simon Says multijugador local con caracter√≠sticas personalizadas desarrol
 ### Vista del juego completo
 ![Full Game View](repo%20imgs/Screenshot%202025-10-25%20181018.png)
 
+## Ì∫Ä Demo en Vivo
+
+[ÌæÆ **JUGAR AHORA** - Netlify Demo](https://simon-game-multijugador-local.netlify.app/)
+
 ## Ìª†Ô∏è Tecnolog√≠as Utilizadas
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6)
 - **Librer√≠as**: jQuery para DOM manipulation
 - **Audio**: Web Audio API para efectos de sonido
 - **Responsive**: CSS Grid y Flexbox
+- **Deploy**: Netlify (integraci√≥n continua desde GitHub)
 
 ## ‚ö° Caracter√≠sticas T√©cnicas
 
@@ -44,7 +49,7 @@ Juego Simon Says multijugador local con caracter√≠sticas personalizadas desarrol
 
 ## ‚ñ∂Ô∏è C√≥mo Jugar
 
-1. Abrir `index.html` en tu navegador
+1. Hacer click en el **Demo en Vivo** ‚òùÔ∏è
 2. Seleccionar la cantidad de jugadores
 3. Ingresar los nombres de cada jugador
 4. El juego asignar√° autom√°ticamente colores √∫nicos
@@ -59,11 +64,7 @@ Juego Simon Says multijugador local con caracter√≠sticas personalizadas desarrol
 - Si fallas, pierdes tu turno
 - El jugador con mayor puntuaci√≥n gana
 
-## Ì∫Ä Demo en Vivo
-
-[Ver Demo](https://pusineriemanuel.github.io/simon-game-local-multiplayer/)
-
-## Ì≥¶ Instalaci√≥n
+## Ì≥¶ Instalaci√≥n Local
 
 ```bash
 # Clonar el repositorio
@@ -93,4 +94,4 @@ Las contribuciones son bienvenidas. Para cambios importantes:
 
 ---
 
-‚≠ê **¬øTe gust√≥ el proyecto? ¬°Dale una estrella!** ‚≠ê
+‚≠ê **¬øTe gust√≥ el proyecto? ¬°Dale una estrella en GitHub!** ‚≠ê
