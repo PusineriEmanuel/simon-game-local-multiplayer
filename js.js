@@ -92,12 +92,23 @@ function selectorDeJugador() {
 
     $(`#playerDiv${i}`).hover(
       function () {
-        $(this).css("background-color", rgbColor);
+        if (!$(this).hasClass("selected")) {
+          $(this).css("background-color", rgbColor);
+        }
       },
       function () {
-        $(this).css("background-color", "");
-      }
+        if (!$(this).hasClass("selected")) {
+          $(this).css("background-color", "");
+        }
+      },
     );
+
+    $(`#playerDiv${i}`).click(function () {
+      // Quitar selección de otros jugadores
+      $(".divDeJugador").removeClass("selected").css("background-color", "");
+      // Marcar este como seleccionado
+      $(this).addClass("selected").css("background-color", rgbColor);
+    });
   }
 }
 
@@ -106,7 +117,7 @@ function selectorDeJugador() {
 //declaraciones
 let condicionalParaActivarJuego = 0;
 let cantidadJugadores = $("#jugadores").val();
-const buttonColurs = ["green", "red", "yellow", "blue"];
+const buttonColors = ["green", "red", "yellow", "blue"];
 const userClickedPattern = [];
 const gamePattern = [];
 let level = 0;
@@ -134,7 +145,7 @@ selectorDeJugadorEtapaDos();
 //siguiente nivel
 function nextSequence() {
   let randomNumber = Math.floor(Math.random() * 4);
-  let randomChosenColour = buttonColurs[randomNumber];
+  let randomChosenColour = buttonColors[randomNumber];
   gamePattern.push(randomChosenColour);
   console.log(`gamePattern = ${gamePattern}`);
   $("h1").text(`Level ${level}`);
@@ -172,7 +183,7 @@ function checkAnswer() {
     if (userClickedPattern[i] !== gamePattern[i]) {
       console.log("wrong");
       new Audio("/sounds/wrong.mp3").play();
-      $("h1").text("Game Over, Press Any Key to Restart");
+      $("h1").text("Game Over!");
       $("body").toggleClass("game-over");
       setTimeout(function () {
         $("body").toggleClass("game-over");
@@ -218,6 +229,8 @@ function startOver() {
   level = 0;
   checkNextSequence = 0;
   jugadorActual = null;
+
+  $(".divDeJugador").removeClass("selected").css("background-color", "");
 }
 
 //sonido
@@ -270,20 +283,20 @@ $(".cube").on("click", function () {
       checkAnswer();
     } else {
       $("#pressAKeyToStart").toggleClass("error");
-      $(`#${idDeJugadorActual}`).toggleClass("errorAlert");
+      $("#pressAKeyToStart").toggleClass("errorAlert");
       setTimeout(function () {
         $("#pressAKeyToStart").toggleClass("error");
-        $(`#${idDeJugadorActual}`).toggleClass("errorAlert");
+        $("#pressAKeyToStart").toggleClass("errorAlert");
       }, 600);
     }
   } else {
     for (let i = 0; i < cantidadJugadores; i++) {
-      let idDeJugadorActual = `playerDiv${i}`;
-      $(`#${idDeJugadorActual}`).toggleClass("error");
-      $(`#${idDeJugadorActual}`).toggleClass("errorAlert");
+      let jugadorActual = `playerDiv${i}`;
+      $(`#${jugadorActual}`).toggleClass("error");
+      $(`#${jugadorActual}`).toggleClass("errorAlert");
       setTimeout(function () {
-        $(`#${idDeJugadorActual}`).toggleClass("error");
-        $(`#${idDeJugadorActual}`).toggleClass("errorAlert");
+        $(`#${jugadorActual}`).toggleClass("error");
+        $(`#${jugadorActual}`).toggleClass("errorAlert");
       }, 600);
     }
   }
@@ -307,6 +320,3 @@ $(document).on("keydown", function () {
     }
   }
 });
-
-////////
-//animaciones

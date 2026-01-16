@@ -50,6 +50,7 @@ h2 {
   border-radius: 35px;
   color: rgb(248, 237, 180);
   font-size: 3rem;
+  margin: auto;
 }
 h2:nth-child(1) {
   color: rgb(221, 221, 221);
@@ -196,7 +197,6 @@ input::placeholder {
     rgba(0, 128, 255, 0)
   );
   border-radius: 35px;
-  width: 50%;
 }
 
 .tablaDePuntuaciones {
