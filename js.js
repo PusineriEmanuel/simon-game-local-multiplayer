@@ -320,3 +320,7 @@ $(document).on("keydown", function () {
     }
   }
 });
+
+/* notes:
+
+    put a username limit caracter of 16 or so*/
