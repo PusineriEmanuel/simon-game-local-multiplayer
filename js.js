@@ -26,6 +26,7 @@ $("#agregarInputTest").on("click", function () {
     newInput.name = `jugador ${i}`;
     newInput.placeholder = "Nombre de Jugador";
     newInput.required = true;
+    newInput.maxLength = 16;
     newInput.id = `input${i}`;
 
     const newSmall = document.createElement("small");

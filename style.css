@@ -113,6 +113,10 @@ form {
   outline: none;
 }
 
+.amountOfPlayersInput {
+  width: 190px;
+}
+
 input[type="number"] {
   appearance: textfield;
 }
